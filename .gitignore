@@ -3,3 +3,36 @@
 
 
 CasosDeUso/WorkingFiles/
+
+codeIonic/*~
+codeIonic/*.sw[mnpcod]
+codeIonic/*.log
+codeIonic/*.tmp
+codeIonic/*.tmp.*
+codeIonic/log.txt
+codeIonic/*.sublime-project
+codeIonic/*.sublime-workspace
+codeIonic/.vscode/
+codeIonic/npm-debug.log*
+
+codeIonic/.idea/
+codeIonic/.sourcemaps/
+codeIonic/.sass-cache/
+codeIonic/.tmp/
+codeIonic/.versions/
+codeIonic/coverage/
+codeIonic/dist/
+codeIonic/node_modules/
+codeIonic/tmp/
+codeIonic/temp/
+codeIonic/hooks/
+codeIonic/platforms/
+codeIonic/plugins/
+codeIonic/plugins/android.json
+codeIonic/plugins/ios.json
+codeIonic/www/
+codeIonic/$RECYCLE.BIN/
+
+codeIonic/.DS_Store
+codeIonic/Thumbs.db
+codeIonic/UserInterfaceState.xcuserstate

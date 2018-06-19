@@ -2,37 +2,35 @@
 # http://git-scm.com/docs/gitignore
 
 
-CasosDeUso/WorkingFiles/
+retoCaminoApp/*~
+retoCaminoApp/*.sw[mnpcod]
+retoCaminoApp/*.log
+retoCaminoApp/*.tmp
+retoCaminoApp/*.tmp.*
+retoCaminoApp/log.txt
+retoCaminoApp/*.sublime-project
+retoCaminoApp/*.sublime-workspace
+retoCaminoApp/.vscode/
+retoCaminoApp/npm-debug.log*
 
-codeIonic/*~
-codeIonic/*.sw[mnpcod]
-codeIonic/*.log
-codeIonic/*.tmp
-codeIonic/*.tmp.*
-codeIonic/log.txt
-codeIonic/*.sublime-project
-codeIonic/*.sublime-workspace
-codeIonic/.vscode/
-codeIonic/npm-debug.log*
+retoCaminoApp/.idea/
+retoCaminoApp/.sourcemaps/
+retoCaminoApp/.sass-cache/
+retoCaminoApp/.tmp/
+retoCaminoApp/.versions/
+retoCaminoApp/coverage/
+retoCaminoApp/dist/
+retoCaminoApp/node_modules/
+retoCaminoApp/tmp/
+retoCaminoApp/temp/
+retoCaminoApp/hooks/
+retoCaminoApp/platforms/
+retoCaminoApp/plugins/
+retoCaminoApp/plugins/android.json
+retoCaminoApp/plugins/ios.json
+retoCaminoApp/www/
+retoCaminoApp/$RECYCLE.BIN/
 
-codeIonic/.idea/
-codeIonic/.sourcemaps/
-codeIonic/.sass-cache/
-codeIonic/.tmp/
-codeIonic/.versions/
-codeIonic/coverage/
-codeIonic/dist/
-codeIonic/node_modules/
-codeIonic/tmp/
-codeIonic/temp/
-codeIonic/hooks/
-codeIonic/platforms/
-codeIonic/plugins/
-codeIonic/plugins/android.json
-codeIonic/plugins/ios.json
-codeIonic/www/
-codeIonic/$RECYCLE.BIN/
-
-codeIonic/.DS_Store
-codeIonic/Thumbs.db
-codeIonic/UserInterfaceState.xcuserstate
+retoCaminoApp/.DS_Store
+retoCaminoApp/Thumbs.db
+retoCaminoApp/UserInterfaceState.xcuserstate

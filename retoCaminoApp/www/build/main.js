@@ -55,7 +55,7 @@ var Homepage = /** @class */ (function () {
     }
     Homepage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'homepage',template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/homepage/homepage.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Reto Camino Homepage</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <img src="" alt="imagen correcaminos presentacion">\n      <form>\n        <ion-label>Email</ion-label><ion-input placeholder="introduce tu nombre"></ion-input>\n        <ion-label>Contraseña</ion-label><ion-input placeholder="introduce tu email"></ion-input>\n        <section>\n            <button ion-button color="primary">Entrar</button>\n            <button ion-button color="primary">Registrarse</button>\n        </section>\n      </form>    \n</ion-content>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/homepage/homepage.html"*/
+            selector: 'homepage',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/homepage/homepage.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Reto Camino Homepage</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <img src="" alt="imagen correcaminos presentacion">\n      <form>\n        <ion-label>Email</ion-label><ion-input placeholder="introduce tu nombre"></ion-input>\n        <ion-label>Contraseña</ion-label><ion-input placeholder="introduce tu email"></ion-input>\n        <section>\n            <button ion-button color="primary">Entrar</button>\n            <button ion-button color="primary">Registrarse</button>\n        </section>\n      </form>    \n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/homepage/homepage.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], Homepage);
@@ -108,7 +108,7 @@ var ListPage = /** @class */ (function () {
     };
     ListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Lista de retos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon name="{{item.icon}}" item-left></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-right>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/list/list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/list/list.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Lista de retos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n      <ion-icon name="{{item.icon}}" item-left></ion-icon>\n      {{item.title}}\n      <div class="item-note" item-right>\n        {{item.note}}\n      </div>\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/list/list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ListPage);
@@ -146,7 +146,7 @@ var ItemDetailsPage = /** @class */ (function () {
     }
     ItemDetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-item-details',template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/item-details/item-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button menuToggle *ngIf="!selectedItem">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Item Details</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h3 text-center *ngIf="selectedItem">\n    {{selectedItem.title}}\n    <ion-icon [name]="selectedItem.icon"></ion-icon>\n  </h3>\n  <h4 text-center *ngIf="selectedItem">\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </h4>\n</ion-content>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/item-details/item-details.html"*/
+            selector: 'page-item-details',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/item-details/item-details.html"*/'<ion-header>\n  <ion-navbar>\n    <button menuToggle *ngIf="!selectedItem">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Item Details</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h3 text-center *ngIf="selectedItem">\n    {{selectedItem.title}}\n    <ion-icon [name]="selectedItem.icon"></ion-icon>\n  </h3>\n  <h4 text-center *ngIf="selectedItem">\n    You navigated here from <b>{{selectedItem.title}}</b>\n  </h4>\n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/item-details/item-details.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ItemDetailsPage);
@@ -178,7 +178,7 @@ var SubscripcionComponent = /** @class */ (function () {
     }
     SubscripcionComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'subscripcion',template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/subscripcion/subscripcion.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Subscripcion a Reto</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div>\n    Subscripcion\n  </div>\n \n\n</ion-content>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/subscripcion/subscripcion.html"*/
+            selector: 'subscripcion',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/subscripcion/subscripcion.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Subscripcion a Reto</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <div>\n    Subscripcion\n  </div>\n \n\n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/subscripcion/subscripcion.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], SubscripcionComponent);
@@ -210,7 +210,7 @@ var VerDetalleRetoComponent = /** @class */ (function () {
     }
     VerDetalleRetoComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'verDetalleReto',template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/verDetalle/verDetalleReto.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ver detalle reto</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  verDetalle\n\n</ion-content>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/verDetalle/verDetalleReto.html"*/
+            selector: 'verDetalleReto',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/verDetalle/verDetalleReto.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ver detalle reto</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  verDetalle\n\n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/verDetalle/verDetalleReto.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], VerDetalleRetoComponent);
@@ -242,7 +242,7 @@ var GuardarHitoComponent = /** @class */ (function () {
     }
     GuardarHitoComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'guardarHito',template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/guardarHito/guardarHito.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>  Guardar Hito    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  Guardar Hito\n\n</ion-content>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/guardarHito/guardarHito.html"*/
+            selector: 'guardarHito',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/guardarHito/guardarHito.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>  Guardar Hito    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  Guardar Hito\n\n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/guardarHito/guardarHito.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], GuardarHitoComponent);
@@ -274,7 +274,7 @@ var CompartirComponent = /** @class */ (function () {
     }
     CompartirComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'compartir',template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/compartir/compartir.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Compartir</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  Compartir\n\n</ion-content>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/pages/compartir/compartir.html"*/
+            selector: 'compartir',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/compartir/compartir.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Compartir</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  Compartir\n\n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/compartir/compartir.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], CompartirComponent);
@@ -455,7 +455,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/app/app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Pages</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/home/sk4tt/REPOSITORIOS/prueba/reto/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/app/app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Pages</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* MenuController */],

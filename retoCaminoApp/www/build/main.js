@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 108:
+/***/ 109:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 108;
+webpackEmptyAsyncContext.id = 109;
 
 /***/ }),
 
-/***/ 149:
+/***/ 150:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,11 +30,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 149;
+webpackEmptyAsyncContext.id = 150;
 
 /***/ }),
 
-/***/ 189:
+/***/ 190:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66,14 +66,14 @@ var Homepage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 190:
+/***/ 191:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_details_item_details__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_details_item_details__ = __webpack_require__(192);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -119,13 +119,13 @@ var ListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 191:
+/***/ 192:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -289,9 +289,147 @@ var CompartirComponent = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapaComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(201);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MapaComponent = /** @class */ (function () {
+    function MapaComponent(navCtrl, plt, geolocation) {
+        this.navCtrl = navCtrl;
+        this.plt = plt;
+        this.geolocation = geolocation;
+    }
+    MapaComponent.prototype.ionViewDidLoad = function () {
+        this.showMap();
+    };
+    MapaComponent.prototype.showMap = function () {
+        var _this = this;
+        var madrid = new google.maps.LatLng(40.415335, -3.707583);
+        this.geolocation.getCurrentPosition().then(function (pos) {
+            var miPosicion = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+            var icon = "assets/imgs/Monigote.png";
+            _this.addMarkerIcono(miPosicion, _this.map, icon);
+        });
+        var options = {
+            center: madrid,
+            zoom: 12,
+            mapTypeId: 'terrain' //'terrain', 'satellite','hybrid'
+        };
+        this.map = new google.maps.Map(this.mapRef.nativeElement, options);
+        //this.addMarker(madrid, this.map);
+        var marcadores = [{
+                nombre: 'Sol',
+                lat: 40.465315,
+                long: -3.616530,
+            }, {
+                nombre: 'Gold mirror',
+                lat: 40.418238,
+                long: -3.691775,
+            }, {
+                nombre: 'Vertical Garden',
+                lat: 40.420289,
+                long: -3.688782,
+            }, {
+                nombre: 'Libertad',
+                lat: 40.425567,
+                long: -3.690949,
+            }, {
+                nombre: 'A medida',
+                lat: 40.418814,
+                long: -3.692562,
+            }, {
+                nombre: 'Cielo de día y cielo de noche',
+                lat: 40.417936,
+                long: -3.704893,
+            }, {
+                nombre: 'MENINA DECONSTRUIDA',
+                lat: 40.422313,
+                long: -3.692546,
+            }, {
+                nombre: 'Musha',
+                lat: 40.418604,
+                long: -3.712794,
+            }, {
+                nombre: 'MENINA DECONSTRUIDA',
+                lat: 40.422313,
+                long: -3.692546,
+            }, {
+                nombre: 'MENINA DECONSTRUIDA',
+                lat: 40.422313,
+                long: -3.692546,
+            }, {
+                nombre: 'MENINA DECONSTRUIDA',
+                lat: 40.422313,
+                long: -3.692546,
+            },
+        ];
+        console.log("el array " + marcadores);
+        for (var posicion in marcadores) {
+            this.cargarPuntos(marcadores);
+        }
+    };
+    MapaComponent.prototype.cargarPuntos = function (marcadores) {
+        for (var posicion in marcadores) {
+            var latLong = new google.maps.LatLng(marcadores[posicion].lat, marcadores[posicion].long);
+            console.log("posiciones " + latLong);
+            var marker = new google.maps.Marker({
+                position: latLong,
+                title: marcadores[posicion].nombre,
+                icon: 'assets/imgs/menina.png',
+            });
+            this.addMarker(marker, this.map);
+            marker.setMap(this.map);
+        }
+    };
+    MapaComponent.prototype.addMarker = function (position, map) {
+        return new google.maps.Marker({
+            position: position,
+            map: map,
+        });
+    };
+    MapaComponent.prototype.addMarkerIcono = function (position, map, icon) {
+        return new google.maps.Marker({
+            position: position,
+            map: map,
+            icon: icon,
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], MapaComponent.prototype, "mapRef", void 0);
+    MapaComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'mapa',template:/*ion-inline-start:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/mapa/mapa.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mapa</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <div #map id="map"></div>\n</ion-content>\n'/*ion-inline-end:"/Users/Dev1/Desktop/Projects/RetoCamino/retoCaminoApp/src/pages/mapa/mapa.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]])
+    ], MapaComponent);
+    return MapaComponent;
+}());
+
+//# sourceMappingURL=mapa.js.map
+
+/***/ }),
+
+/***/ 202:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(225);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -299,30 +437,34 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 223:
+/***/ 225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_homepage_homepage__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_item_details_item_details__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_homepage_homepage__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_item_details_item_details__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_subscripcion_subscripcion__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_verDetalle_verDetalleReto__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_guardarHito_guardarHito__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_geolocation__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -349,7 +491,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__pages_subscripcion_subscripcion__["a" /* SubscripcionComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_verDetalle_verDetalleReto__["a" /* VerDetalleRetoComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_guardarHito_guardarHito__["a" /* GuardarHitoComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__["a" /* CompartirComponent */]
+                __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__["a" /* CompartirComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__["a" /* MapaComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -366,12 +509,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__pages_subscripcion_subscripcion__["a" /* SubscripcionComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_verDetalle_verDetalleReto__["a" /* VerDetalleRetoComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_guardarHito_guardarHito__["a" /* GuardarHitoComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__["a" /* CompartirComponent */]
+                __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__["a" /* CompartirComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__["a" /* MapaComponent */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_14__ionic_native_geolocation__["a" /* Geolocation */],
             ]
         })
     ], AppModule);
@@ -382,21 +527,22 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 266:
+/***/ 268:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_homepage_homepage__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_list_list__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_homepage_homepage__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_list_list__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_subscripcion_subscripcion__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_verDetalle_verDetalleReto__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_guardarHito_guardarHito__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_compartir_compartir__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_mapa_mapa__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -406,6 +552,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -433,6 +580,7 @@ var MyApp = /** @class */ (function () {
             { title: 'Ver detalle Reto', component: __WEBPACK_IMPORTED_MODULE_7__pages_verDetalle_verDetalleReto__["a" /* VerDetalleRetoComponent */] },
             { title: 'Guardar Hito', component: __WEBPACK_IMPORTED_MODULE_8__pages_guardarHito_guardarHito__["a" /* GuardarHitoComponent */] },
             { title: 'Compartir', component: __WEBPACK_IMPORTED_MODULE_9__pages_compartir_compartir__["a" /* CompartirComponent */] },
+            { title: 'Mapa', component: __WEBPACK_IMPORTED_MODULE_10__pages_mapa_mapa__["a" /* MapaComponent */] },
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -469,5 +617,5 @@ var MyApp = /** @class */ (function () {
 
 /***/ })
 
-},[200]);
+},[202]);
 //# sourceMappingURL=main.js.map

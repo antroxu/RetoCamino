@@ -13,6 +13,9 @@ import { SubscripcionComponent } from '../pages/subscripcion/subscripcion';
 import { VerDetalleRetoComponent } from '../pages/verDetalle/verDetalleReto';
 import { GuardarHitoComponent } from '../pages/guardarHito/guardarHito';
 import { CompartirComponent } from '../pages/compartir/compartir';
+import { MapaComponent } from '../pages/mapa/mapa';
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { CompartirComponent } from '../pages/compartir/compartir';
     SubscripcionComponent,
     VerDetalleRetoComponent,
     GuardarHitoComponent,
-    CompartirComponent
+    CompartirComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -38,12 +42,14 @@ import { CompartirComponent } from '../pages/compartir/compartir';
     SubscripcionComponent,
     VerDetalleRetoComponent,
     GuardarHitoComponent,
-    CompartirComponent
+    CompartirComponent,
+    MapaComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation,
   ]
 })
 export class AppModule {}

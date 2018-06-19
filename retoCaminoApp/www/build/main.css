@@ -25691,3 +25691,7 @@ ion-navbar.toolbar {
   color: #ffffff;
   background-color: transparent;
 }
+
+mapa #map {
+  height: 100%;
+}

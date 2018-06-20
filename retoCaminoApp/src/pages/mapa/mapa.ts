@@ -18,16 +18,28 @@ export class MapaComponent {
   @ViewChild('map') mapRef: ElementRef;
 
   constructor(public navCtrl: NavController, private plt: Platform, private geolocation: Geolocation) {
+
+
     
   } 
-  ionViewDidLoad(){
-    this.showMap();
+
+  
+  //ionViewDidLoad(){ this.showMap(); }
+
+  //ngOnInit() { this.showMap(); }
+
+  prueba(){
+
+    let ctrl: HTMLElement = document.getElementById("caca");
+
+    console.log ("Estoy en el cosntructor " + ctrl);
+
   }
 
   showMap(){
 
     const madrid = new google.maps.LatLng(40.415335, -3.707583);
-    
+    console.log ("Se va a mostrar el mapa");
       this.geolocation.getCurrentPosition().then(pos=>{
         let miPosicion = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
         let icon = "assets/imgs/Monigote.png"

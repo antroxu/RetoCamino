@@ -1,3 +1,19 @@
 page-reto-hitos {
+    ion-card.card.card-md{
+        display: inline-flex !important; 
+    }
+    ion-card img {
+        display: inline-flex;
+        width: 100px;
+        margin: 10px 10px 10px 10px;
+        height: 100px;
+    }
+    .card-content-md {
+        padding: 0px 0px 0px 0px !important;
+    }
 
+    .card-title-md {
+        font-size: 2rem !important;
+        line-height: 1.0 !important;
+    }
 }

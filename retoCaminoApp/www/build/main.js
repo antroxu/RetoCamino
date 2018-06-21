@@ -72,7 +72,7 @@ var Homepage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_details_item_details__ = __webpack_require__(192);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -125,7 +125,7 @@ var ListPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemDetailsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -289,10 +289,8 @@ var CompartirComponent = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapaComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetalleReto; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -303,29 +301,65 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+var DetalleReto = /** @class */ (function () {
+    function DetalleReto() {
+    }
+    DetalleReto = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'detalle_reto',template:/*ion-inline-start:"C:\Data\projects\RetoCamino\retoCaminoApp\src\pages\detalleReto\detallereto.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Detalle Reto</ion-title>\n\n  </ion-navbar>\n\n\n\n  <ion-toolbar no-border-top>\n\n    <ion-segment [(ngModel)]="detallereto" border-color = "#FFFFFF" color = "#FFFFFF">\n\n      <ion-segment-button value="info" border-color = "#FFFFFF" color = "#FFFFFF">\n\n        Info\n\n      </ion-segment-button>\n\n      <ion-segment-button value="hitos">\n\n        Hitos\n\n      </ion-segment-button>\n\n      <ion-segment-button value="mapa">\n\n        Mapa\n\n      </ion-segment-button>\n\n    </ion-segment>\n\n  </ion-toolbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <div [ngSwitch]="detallereto">\n\n    <!-- Primer pestaña, información del reto-->\n\n    <ion-list *ngSwitchCase="\'info\'">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 1</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 2</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 3</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 4</h2>\n\n      </ion-item>\n\n    </ion-list>\n\n\n\n    <!-- Segunda pestaña, lista de hitos-->\n\n    <ion-list *ngSwitchCase="\'hitos\'">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/VGarden.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 5</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/VGarden.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 6</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/VGarden.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 7</h2>\n\n      </ion-item>\n\n     \n\n    </ion-list>\n\n\n\n    \n\n    <ion-list *ngSwitchCase="\'mapa\'">\n\n\n\n      <mapa></mapa>\n\n      \n\n    </ion-list>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Data\projects\RetoCamino\retoCaminoApp\src\pages\detalleReto\detallereto.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], DetalleReto);
+    return DetalleReto;
+}());
 
+//# sourceMappingURL=detalleReto.js.map
+
+/***/ }),
+
+/***/ 201:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapaComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_native_geolocation__ = __webpack_require__(202);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+//import { NavController, Platform } from 'ionic-angular';
 
 var MapaComponent = /** @class */ (function () {
-    function MapaComponent(navCtrl, plt, geolocation) {
-        this.navCtrl = navCtrl;
-        this.plt = plt;
+    //constructor(public navCtrl: NavController, private plt: Platform, public geolocation: Geolocation) {
+    function MapaComponent(geolocation) {
         this.geolocation = geolocation;
+        console.log("HA ENTRADO EN MapaComponent");
     }
-    //ionViewDidLoad(){ this.showMap(); }
-    //ngOnInit() { this.showMap(); }
-    MapaComponent.prototype.prueba = function () {
-        var ctrl = document.getElementById("caca");
-        console.log("Estoy en el cosntructor " + ctrl);
-    };
+    MapaComponent.prototype.ngOnInit = function () { console.log("HA ENTRADO EN ngOnInit"); this.showMap(); };
+    ;
+    //ionViewDidLoad() { console.log("HA ENTRADO EN ionViewDidLoad"); this.showMap(); }
     MapaComponent.prototype.showMap = function () {
         var _this = this;
+        console.log("HA ENTRADO EN showMap");
         var madrid = new google.maps.LatLng(40.415335, -3.707583);
         console.log("Se va a mostrar el mapa");
-        this.geolocation.getCurrentPosition().then(function (pos) {
+        this.geolocation.getCurrentPosition()
+            .then(function (pos) {
             var miPosicion = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
             var icon = "assets/imgs/Monigote.png";
             _this.addMarkerIcono(miPosicion, _this.map, icon);
-        });
+        })
+            .catch(function (error) { console.log("Error en getCurrentPosition" + error); });
+        var miPosicion = new google.maps.LatLng(40.465315, -3.616530);
+        var icon = "assets/imgs/Monigote.png";
+        this.addMarkerIcono(miPosicion, this.map, icon);
         var options = {
             center: madrid,
             zoom: 12,
@@ -341,61 +375,24 @@ var MapaComponent = /** @class */ (function () {
                 nombre: 'Gold mirror',
                 lat: 40.418238,
                 long: -3.691775,
-            }, {
-                nombre: 'Vertical Garden',
-                lat: 40.420289,
-                long: -3.688782,
-            }, {
-                nombre: 'Libertad',
-                lat: 40.425567,
-                long: -3.690949,
-            }, {
-                nombre: 'A medida',
-                lat: 40.418814,
-                long: -3.692562,
-            }, {
-                nombre: 'Cielo de día y cielo de noche',
-                lat: 40.417936,
-                long: -3.704893,
-            }, {
-                nombre: 'MENINA DECONSTRUIDA',
-                lat: 40.422313,
-                long: -3.692546,
-            }, {
-                nombre: 'Musha',
-                lat: 40.418604,
-                long: -3.712794,
-            }, {
-                nombre: 'MENINA DECONSTRUIDA',
-                lat: 40.422313,
-                long: -3.692546,
-            }, {
-                nombre: 'MENINA DECONSTRUIDA',
-                lat: 40.422313,
-                long: -3.692546,
-            }, {
-                nombre: 'MENINA DECONSTRUIDA',
-                lat: 40.422313,
-                long: -3.692546,
-            },
-        ];
+            }];
         console.log("el array " + marcadores);
         for (var posicion in marcadores) {
-            this.cargarPuntos(marcadores);
+            this.cargarPuntos(marcadores, posicion);
         }
+        var mapEle = document.getElementById('map');
+        console.log("fin");
     };
-    MapaComponent.prototype.cargarPuntos = function (marcadores) {
-        for (var posicion in marcadores) {
-            var latLong = new google.maps.LatLng(marcadores[posicion].lat, marcadores[posicion].long);
-            console.log("posiciones " + latLong);
-            var marker = new google.maps.Marker({
-                position: latLong,
-                title: marcadores[posicion].nombre,
-                icon: 'assets/imgs/menina.png',
-            });
-            this.addMarker(marker, this.map);
-            marker.setMap(this.map);
-        }
+    MapaComponent.prototype.cargarPuntos = function (marcadores, posicion) {
+        var latLong = new google.maps.LatLng(marcadores[posicion].lat, marcadores[posicion].long);
+        console.log("posiciones " + latLong);
+        var marker = new google.maps.Marker({
+            position: latLong,
+            title: marcadores[posicion].nombre,
+            icon: 'assets/imgs/menina.png',
+        });
+        this.addMarker(marker, this.map);
+        marker.setMap(this.map);
     };
     MapaComponent.prototype.addMarker = function (position, map) {
         return new google.maps.Marker({
@@ -412,29 +409,28 @@ var MapaComponent = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('map'),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], MapaComponent.prototype, "mapRef", void 0);
     MapaComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'mapa',template:/*ion-inline-start:"C:\Data\projects\RetoCamino\retoCaminoApp\src\pages\mapa\mapa.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mapa</ion-title>\n\n  </ion-navbar>\n\n\n\n  <ion-toolbar no-border-top>\n\n    <ion-segment [(ngModel)]="detallereto">\n\n      <ion-segment-button value="info">\n\n        Info\n\n      </ion-segment-button>\n\n      <ion-segment-button value="hitos">\n\n        Hitos\n\n      </ion-segment-button>\n\n      <ion-segment-button value="mapa">\n\n        Mapa\n\n      </ion-segment-button>\n\n    </ion-segment>\n\n  </ion-toolbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <div [ngSwitch]="detallereto">\n\n    <!-- Primer pestaña, información del reto-->\n\n    <ion-list *ngSwitchCase="\'info\'">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 1</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 2</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 3</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/Asteroide.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 4</h2>\n\n      </ion-item>\n\n    </ion-list>\n\n\n\n    <!-- Segunda pestaña, lista de hitos-->\n\n    <ion-list *ngSwitchCase="\'hitos\'">\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/VGarden.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 5</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/VGarden.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 6</h2>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-thumbnail item-start>\n\n          <img src="../../assets/imgs/VGarden.png">\n\n        </ion-thumbnail>\n\n        <h2>Menina 7</h2>\n\n      </ion-item>\n\n     \n\n    </ion-list>\n\n\n\n    <!-- Tercer pestaña, mapa-->\n\n    <ion-list *ngSwitchCase="\'mapa\'" (tap)="showMap()" id="caca">\n\n\n\n      <button ion-button (click)="prueba()" color="primary">Mapa</button>\n\n      <ion-item>\n\n        <div #map id="map"></div>\n\n      </ion-item>\n\n        \n\n      \n\n    </ion-list>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"C:\Data\projects\RetoCamino\retoCaminoApp\src\pages\mapa\mapa.html"*/
+            selector: 'mapa',template:/*ion-inline-start:"C:\Data\projects\RetoCamino\retoCaminoApp\src\pages\mapa\mapa.html"*/'<!--  <ion-content>  -->  \n\n        <div #map id="map"></div>\n\n<!--  </ion-content> --> '/*ion-inline-end:"C:\Data\projects\RetoCamino\retoCaminoApp\src\pages\mapa\mapa.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_geolocation__["a" /* Geolocation */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ionic_native_geolocation__["a" /* Geolocation */]])
     ], MapaComponent);
     return MapaComponent;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=mapa.js.map
 
 /***/ }),
 
-/***/ 202:
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(226);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -442,15 +438,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 225:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_homepage_homepage__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_item_details_item_details__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_list_list__ = __webpack_require__(191);
@@ -460,14 +456,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_verDetalle_verDetalleReto__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_guardarHito_guardarHito__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_geolocation__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_geolocation__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_detalleReto_detalleReto__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -497,7 +495,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__pages_verDetalle_verDetalleReto__["a" /* VerDetalleRetoComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_guardarHito_guardarHito__["a" /* GuardarHitoComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__["a" /* CompartirComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__["a" /* MapaComponent */]
+                __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__["a" /* MapaComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_detalleReto_detalleReto__["a" /* DetalleReto */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -515,7 +514,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__pages_verDetalle_verDetalleReto__["a" /* VerDetalleRetoComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_guardarHito_guardarHito__["a" /* GuardarHitoComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_compartir_compartir__["a" /* CompartirComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__["a" /* MapaComponent */]
+                __WEBPACK_IMPORTED_MODULE_13__pages_mapa_mapa__["a" /* MapaComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_detalleReto_detalleReto__["a" /* DetalleReto */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__["a" /* StatusBar */],
@@ -532,13 +532,13 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 268:
+/***/ 269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_homepage_homepage__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_list_list__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(193);
@@ -547,7 +547,8 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_verDetalle_verDetalleReto__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_guardarHito_guardarHito__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_compartir_compartir__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_mapa_mapa__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_detalleReto_detalleReto__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_mapa_mapa__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -557,6 +558,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -585,7 +587,8 @@ var MyApp = /** @class */ (function () {
             { title: 'Ver detalle Reto', component: __WEBPACK_IMPORTED_MODULE_7__pages_verDetalle_verDetalleReto__["a" /* VerDetalleRetoComponent */] },
             { title: 'Guardar Hito', component: __WEBPACK_IMPORTED_MODULE_8__pages_guardarHito_guardarHito__["a" /* GuardarHitoComponent */] },
             { title: 'Compartir', component: __WEBPACK_IMPORTED_MODULE_9__pages_compartir_compartir__["a" /* CompartirComponent */] },
-            { title: 'Mapa', component: __WEBPACK_IMPORTED_MODULE_10__pages_mapa_mapa__["a" /* MapaComponent */] },
+            { title: 'Detalle Reto', component: __WEBPACK_IMPORTED_MODULE_10__pages_detalleReto_detalleReto__["a" /* DetalleReto */] },
+            { title: 'Mapa', component: __WEBPACK_IMPORTED_MODULE_11__pages_mapa_mapa__["a" /* MapaComponent */] },
         ];
     }
     MyApp.prototype.initializeApp = function () {
@@ -622,5 +625,5 @@ var MyApp = /** @class */ (function () {
 
 /***/ })
 
-},[202]);
+},[203]);
 //# sourceMappingURL=main.js.map

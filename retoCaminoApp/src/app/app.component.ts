@@ -11,6 +11,7 @@ import { SubscripcionComponent } from '../pages/subscripcion/subscripcion';
 import { VerDetalleRetoComponent } from '../pages/verDetalle/verDetalleReto';
 import { GuardarHitoComponent } from '../pages/guardarHito/guardarHito';
 import { CompartirComponent } from '../pages/compartir/compartir';
+import { DetalleReto } from '../pages/detalleReto/detalleReto';
 import { MapaComponent } from '../pages/mapa/mapa';
 
 
@@ -40,6 +41,7 @@ export class MyApp {
       { title: 'Ver detalle Reto', component: VerDetalleRetoComponent },
       { title: 'Guardar Hito', component: GuardarHitoComponent },
       { title: 'Compartir', component: CompartirComponent },
+      { title: 'Detalle Reto', component: DetalleReto },
       { title: 'Mapa', component: MapaComponent },
 
     ];

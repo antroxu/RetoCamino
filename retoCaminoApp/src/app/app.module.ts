@@ -15,6 +15,7 @@ import { GuardarHitoComponent } from '../pages/guardarHito/guardarHito';
 import { CompartirComponent } from '../pages/compartir/compartir';
 import { MapaComponent } from '../pages/mapa/mapa';
 import { Geolocation } from '@ionic-native/geolocation';
+import { DetalleReto } from '../pages/detalleReto/detalleReto';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     VerDetalleRetoComponent,
     GuardarHitoComponent,
     CompartirComponent,
-    MapaComponent
+    MapaComponent,
+    DetalleReto
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     VerDetalleRetoComponent,
     GuardarHitoComponent,
     CompartirComponent,
-    MapaComponent
+    MapaComponent,
+    DetalleReto
   ],
   providers: [
     StatusBar,

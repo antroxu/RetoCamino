@@ -25695,3 +25695,9 @@ ion-navbar.toolbar {
 mapa #map {
   height: 100%;
 }
+
+mapa #map {
+  height: 100%;
+  position: static !important;
+  overflow: initial !important;
+}

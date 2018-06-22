@@ -16,4 +16,12 @@ page-reto-hitos {
         font-size: 2rem !important;
         line-height: 1.0 !important;
     }
+    ion-content {
+        position: absolute !important;
+    }
+
+    .scroll-content {
+        overflow-x: initial !important;
+        overflow-y: initial !important;
+    }
 }

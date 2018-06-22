@@ -15,6 +15,7 @@ import { DetalleReto } from '../pages/detalleReto/detalleReto';
 import { MapaComponent } from '../pages/mapa/mapa';
 import { Storage } from '@ionic/storage';
 import { RetoHitosPage } from '../pages/reto-hitos/reto-hitos';
+import { IonicCreditosComponent } from '../pages/creditos/creditos';
 
 
 
@@ -50,6 +51,7 @@ export class MyApp {
       { title: 'Detalle Reto', component: DetalleReto },
       //{ title: 'Mapa', component: MapaComponent },
       { title: 'Reto Hitos', component: RetoHitosPage },
+      { title: 'Creditos', component: IonicCreditosComponent },
 
     ];
   }

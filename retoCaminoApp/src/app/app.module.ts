@@ -19,6 +19,7 @@ import { DetalleReto } from '../pages/detalleReto/detalleReto';
 import { RetoHitosPage } from '../pages/reto-hitos/reto-hitos';
 import { RetoInfoPage } from '../pages/reto-info/reto-info';
 import { IonicStorageModule } from '@ionic/storage';
+import { IonicCreditosComponent } from '../pages/creditos/creditos';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { IonicStorageModule } from '@ionic/storage';
     MapaComponent,
     DetalleReto,
     RetoHitosPage,
-    RetoInfoPage
+    RetoInfoPage,
+    IonicCreditosComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { IonicStorageModule } from '@ionic/storage';
     MapaComponent,
     DetalleReto,
     RetoHitosPage,
-    RetoInfoPage
+    RetoInfoPage,
+    IonicCreditosComponent
   ],
   providers: [
     StatusBar,

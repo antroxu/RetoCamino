@@ -16,7 +16,9 @@ import { CompartirComponent } from '../pages/compartir/compartir';
 import { MapaComponent } from '../pages/mapa/mapa';
 import { Geolocation } from '@ionic-native/geolocation';
 import { DetalleReto } from '../pages/detalleReto/detalleReto';
-
+import { RetoHitosPage } from '../pages/reto-hitos/reto-hitos';
+import { RetoInfoPage } from '../pages/reto-info/reto-info';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,14 @@ import { DetalleReto } from '../pages/detalleReto/detalleReto';
     GuardarHitoComponent,
     CompartirComponent,
     MapaComponent,
-    DetalleReto
+    DetalleReto,
+    RetoHitosPage,
+    RetoInfoPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +51,9 @@ import { DetalleReto } from '../pages/detalleReto/detalleReto';
     GuardarHitoComponent,
     CompartirComponent,
     MapaComponent,
-    DetalleReto
+    DetalleReto,
+    RetoHitosPage,
+    RetoInfoPage
   ],
   providers: [
     StatusBar,

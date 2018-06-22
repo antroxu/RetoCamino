@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 //import { NavController, Platform } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+
 
 import { Geolocation } from '@ionic-native/geolocation';
 
@@ -18,7 +20,7 @@ export class MapaComponent {
   @ViewChild('map') mapRef: ElementRef;
 
   //constructor(public navCtrl: NavController, private plt: Platform, public geolocation: Geolocation) {
-  constructor(public geolocation: Geolocation) {
+  constructor(public geolocation: Geolocation, private storage: Storage) {
     console.log("HA ENTRADO EN MapaComponent");
   }
 
@@ -31,6 +33,7 @@ export class MapaComponent {
     console.log("HA ENTRADO EN showMap");
     const madrid = new google.maps.LatLng(40.415335, -3.707583);
     console.log("Se va a mostrar el mapa");
+
     this.geolocation.getCurrentPosition()
       .then(
         pos => {
@@ -43,11 +46,6 @@ export class MapaComponent {
         error => { console.log("Error en getCurrentPosition" + error) }
       );
 
-
-    let miPosicion = new google.maps.LatLng(40.465315, -3.616530);
-    let icon = "assets/imgs/Monigote.png";
-    this.addMarkerIcono(miPosicion, this.map, icon);
-
     const options = {
       center: madrid,
       zoom: 12,
@@ -58,43 +56,45 @@ export class MapaComponent {
 
     //this.addMarker(madrid, this.map);
 
-    let marcadores = [{
-      nombre: 'Sol',
-      lat: 40.465315,
-      long: -3.616530,
-    }, {
-      nombre: 'Gold mirror',
-      lat: 40.418238,
-      long: -3.691775,
-    }];
-
-    console.log("el array " + marcadores);
-    for (let posicion in marcadores) {
-      this.cargarPuntos(marcadores, posicion);
-    }
-
-    let mapEle: HTMLElement = document.getElementById('map');
-
-    console.log ("fin");
-
-
+    this.cargarPuntos();
   }
 
+  cargarPuntos() {
 
-  cargarPuntos(marcadores, posicion) {
+    let marcadores: any;
 
-    let latLong = new google.maps.LatLng(marcadores[posicion].lat, marcadores[posicion].long);
+    this.storage.get('marcadores').then(
+      ok => {
+        marcadores = ok;
+        console.log("Tenemos los marcadores");
 
-    console.log("posiciones " + latLong);
+        for (let posicion in marcadores) {
+          let latLong = new google.maps.LatLng(marcadores[posicion].lat, marcadores[posicion].long);
+          //console.log("posiciones "+ latLong);
+          let color: string = "";
+          if (marcadores[posicion].completado) {
+            color = 'assets/imgs/imageverde.png';
+          } else {
+            color = 'assets/imgs/menina.png';
+          }
+          let marker = new google.maps.Marker({
+            position: latLong,
+            title: marcadores[posicion].nombre,
+            icon: color, //'assets/imgs/menina.png'  
+    
+          })
+          //this.addMarker(marker, this.map);
+          marker.setMap(this.map);
+        }
 
-    let marker = new google.maps.Marker({
-      position: latLong,
-      title: marcadores[posicion].nombre,
-      icon: 'assets/imgs/menina.png',
-    })
 
-    this.addMarker(marker, this.map);
-    marker.setMap(this.map);
+      },
+      error =>
+        console.log(" error al leer los marcadores" + error));
+
+    console.log("Empezamos a marcar los puntos");
+
+    
   }
 
   addMarker(position, map) {

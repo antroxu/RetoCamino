@@ -13,6 +13,10 @@ import { GuardarHitoComponent } from '../pages/guardarHito/guardarHito';
 import { CompartirComponent } from '../pages/compartir/compartir';
 import { DetalleReto } from '../pages/detalleReto/detalleReto';
 import { MapaComponent } from '../pages/mapa/mapa';
+import { Storage } from '@ionic/storage';
+
+
+
 
 
 @Component({
@@ -22,27 +26,28 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = Homepage;
+  rootPage = DetalleReto;
   pages: Array<{title: string, component: any}>;
 
   constructor(
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private storage: Storage
   ) {
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
-      { title: 'Homepage', component: Homepage },
-      { title: 'Lista de Retos', component: ListPage },
-      { title: 'Subscripcion a Reto', component: SubscripcionComponent },
-      { title: 'Ver detalle Reto', component: VerDetalleRetoComponent },
-      { title: 'Guardar Hito', component: GuardarHitoComponent },
-      { title: 'Compartir', component: CompartirComponent },
+      //{ title: 'Homepage', component: Homepage },
+      //{ title: 'Lista de Retos', component: ListPage },
+      //{ title: 'Subscripcion a Reto', component: SubscripcionComponent },
+      //{ title: 'Ver detalle Reto', component: VerDetalleRetoComponent },
+      //{ title: 'Guardar Hito', component: GuardarHitoComponent },
+      //{ title: 'Compartir', component: CompartirComponent },
       { title: 'Detalle Reto', component: DetalleReto },
-      { title: 'Mapa', component: MapaComponent },
+      //{ title: 'Mapa', component: MapaComponent },
 
     ];
   }

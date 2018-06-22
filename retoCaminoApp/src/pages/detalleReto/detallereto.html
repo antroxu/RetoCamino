@@ -7,8 +7,8 @@
   </ion-navbar>
 
   <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]="detallereto" border-color = "#FFFFFF" color = "#FFFFFF">
-      <ion-segment-button value="info" border-color = "#FFFFFF" color = "#FFFFFF">
+    <ion-segment [(ngModel)]="detallereto">
+      <ion-segment-button  value="info">
         Info
       </ion-segment-button>
       <ion-segment-button value="hitos">
@@ -24,63 +24,22 @@
 
 
 <ion-content>
+
   <div [ngSwitch]="detallereto">
     <!-- Primer pestaña, información del reto-->
-    <ion-list *ngSwitchCase="'info'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/Asteroide.png">
-        </ion-thumbnail>
-        <h2>Menina 1</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/Asteroide.png">
-        </ion-thumbnail>
-        <h2>Menina 2</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/Asteroide.png">
-        </ion-thumbnail>
-        <h2>Menina 3</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/Asteroide.png">
-        </ion-thumbnail>
-        <h2>Menina 4</h2>
-      </ion-item>
-    </ion-list>
+    <div *ngSwitchCase="'info'">
+      <page-reto-info></page-reto-info>
+    </div>
 
     <!-- Segunda pestaña, lista de hitos-->
-    <ion-list *ngSwitchCase="'hitos'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/VGarden.png">
-        </ion-thumbnail>
-        <h2>Menina 5</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/VGarden.png">
-        </ion-thumbnail>
-        <h2>Menina 6</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="../../assets/imgs/VGarden.png">
-        </ion-thumbnail>
-        <h2>Menina 7</h2>
-      </ion-item>
-     
-    </ion-list>
+    <div *ngSwitchCase="'hitos'">
+      <page-reto-hitos></page-reto-hitos>
+    </div>
 
-    
-    <ion-list *ngSwitchCase="'mapa'">
-
+    <!-- Segunda pestaña, lista de hitos-->
+    <div *ngSwitchCase="'mapa'">
       <mapa></mapa>
-      
-    </ion-list>
+    </div>
   </div>
+  
 </ion-content>

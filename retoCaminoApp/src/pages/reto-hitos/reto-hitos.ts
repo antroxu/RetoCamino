@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the RetoHitosPage page.
@@ -14,9 +14,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RetoHitosPage {
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  items: Array<{title: string, note: string, icon: string}>; 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private storage: Storage) {
+    let marcadores: any;
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
     'american-football', 'boat', 'bluetooth', 'build'];
 
@@ -28,10 +29,18 @@ export class RetoHitosPage {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
+
+    this.storage.get('marcadores').then(
+      ok => {
+        marcadores = ok;
+        console.log('marcadores: ',marcadores);
+      })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RetoHitosPage');
+
+  
+  itemTapped($event, item){
+    console.log("click")
   }
 
 }

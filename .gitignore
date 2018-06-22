@@ -28,7 +28,10 @@ retoCaminoApp/platforms/
 retoCaminoApp/plugins/
 retoCaminoApp/plugins/android.json
 retoCaminoApp/plugins/ios.json
-retoCaminoApp/www/
+retoCaminoApp/www/assets/
+retoCaminoApp/www/build/
+retoCaminoApp/www/manifest.json
+retoCaminoApp/www/service-worker.js
 retoCaminoApp/$RECYCLE.BIN/
 
 retoCaminoApp/.DS_Store

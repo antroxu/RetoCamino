@@ -5,14 +5,34 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+      <ion-slides *ngIf="fotos && fotos.length"  autoplay="500" loop="true" 
+        speed="6000" class="slides" pager="true" loop="true"> 
+        <!--"pager" es que salgan los puntos, si hay muchos se quita-->
+          <ion-slide *ngFor="let foto of fotos" loop="true">
+            <img class="imagen" src="{{foto}}">
+          </ion-slide>
+      </ion-slides>
+  
+      <h6>Las Meninas</h6> <ion-icon name="heart-outline"></ion-icon>
 
-  <ion-navbar>
-    <ion-title>reto_info</ion-title>
-  </ion-navbar>
+      <p id="texto">"Meninas Madrid Gallery" es una exposición única y sin precedentes, en la que las meninas de Velázquez, reinterpretadas
+        con la inspiración que Madrid evoca en diferentes artistas, visten la capital para integrarse con todos los ciudadanos
+        y visitantes en la exposición al aire libre más grande del mundo.</p>
+      <br>
+
+      <ion-grid>
+        <ion-row justify-content-start>
+          <ion-col col-3 class="key">Hitos: </ion-col>
+          <ion-col col-2>80 </ion-col>
+        </ion-row>
+        <ion-row justify-content-start>
+          <ion-col col-3 class="key">Lugar: </ion-col>
+          <ion-col col-3>Madrid </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-icon name="walk" class="icono"></ion-icon>  <ion-icon name="bicycle"></ion-icon>
 
 </ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
 </ion-content>

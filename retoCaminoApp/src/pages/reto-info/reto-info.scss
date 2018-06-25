@@ -1,3 +1,32 @@
 page-reto-info {
 
+    h6{
+        padding-left: 20px;
+        display: inline;
+        padding-right: 180px;
+   
+    }
+    .imagen{
+        height: 120px;
+    }
+    .header-md::after{
+        position: fixed !important;
+    }
+
+    #texto{
+        text-align: justify;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .key{
+        font-weight: bold;
+        padding-left: 20px;
+    }
+    
+    .icono{
+        padding-left: 280px;
+        justify-content: flex-end;
+    }
+    
+
 }

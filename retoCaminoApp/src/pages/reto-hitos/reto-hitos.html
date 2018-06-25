@@ -9,14 +9,15 @@
 
 <ion-content>
     <ion-card *ngFor="let item of items" (click)="itemTapped($event, item)" style="display: grid;">
-        <img src="../../assets/imgs/1512730168832.jpg"/>
+    <img src="../../assets/imgs/1512730168832.jpg" />
         <ion-card-content>
           <ion-card-title>
-            {{item.title}} --  Menina Angel  
+        {{item.title}} -- Menina Angel
     
             </ion-card-title>
           <p>
-            {{item.note}} --  Direccion. icono chulesco -- <ion-icon name="{{item.icon}}" item-left></ion-icon>
+        {{item.note}} -- Direccion. icono chulesco --
+        <ion-icon name="{{item.icon}}" item-left></ion-icon>
           </p>
           <ion-row no-padding>
               <!-- <ion-col>

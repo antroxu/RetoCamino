@@ -50,7 +50,7 @@ export class MyApp {
       //{ title: 'Compartir', component: CompartirComponent },
       { title: 'Detalle Reto', component: DetalleReto },
       //{ title: 'Mapa', component: MapaComponent },
-      { title: 'Reto Hitos', component: RetoHitosPage },
+      //{ title: 'Reto Hitos', component: RetoHitosPage },
       { title: 'Creditos', component: IonicCreditosComponent },
 
     ];

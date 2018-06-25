@@ -8,36 +8,28 @@
 
 
 <ion-content>
-    <ion-card *ngFor="let item of items" (click)="itemTapped($event, item)" style="display: grid;">
-        <img src="../../assets/imgs/1512730168832.jpg"/>
+    <div *ngIf="marcadores_listo">
+    <!-- <div> -->
+    <ion-card  *ngFor="let marcador of marcadores" style="display: grid;">
+      
+        <img src="../../{{marcador.foto}}"/>
         <ion-card-content>
           <ion-card-title>
-            {{item.title}} --  Menina Angel  
-    
+            {{marcador.nombre}}
             </ion-card-title>
           <p>
-            {{item.note}} --  Direccion. icono chulesco -- <ion-icon name="{{item.icon}}" item-left></ion-icon>
+            {{marcador.direccion}}
           </p>
           <ion-row no-padding>
-              <!-- <ion-col>
-                <button ion-button clear small color="color-reto-camino" icon-start>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  Favorito
-                </button>
-              </ion-col> -->
               <ion-col text-center>
                 <button ion-button clear small color="color-reto-camino" icon-start>
                   <ion-icon name="map"></ion-icon>
                   Mapa
                 </button>
               </ion-col>
-              <!-- <ion-col text-right>
-                <button ion-button clear small color="color-reto-camino" icon-start>
-                  <ion-icon name="md-share"></ion-icon>
-                  Compartir
-                </button>
-              </ion-col> -->
             </ion-row>
         </ion-card-content>
       </ion-card>
+    <!-- </div> -->
+  </div>
 </ion-content>
